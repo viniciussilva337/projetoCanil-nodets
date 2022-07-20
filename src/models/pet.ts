@@ -8,7 +8,7 @@ type Pet = {
   sex: PetSex
 };
 
-const data: Pet [] = [
+const data: Pet[] = [
   {
     type: "dog",
     image: "pastor-alemao.jpg",
@@ -135,11 +135,9 @@ export const Pet = {
     return data;
   },
   getFromType: (type: PetType): Pet[] => {
-    return data.filter((item) => item.type === type);
+    return data.filter((item) => item.type == type);
   },
   getFromName: (name: string): Pet[] => {
-    return data.filter(
-      (item) => item.name.toLowerCase().indexOf(name.toLocaleLowerCase()) > -1
-    );
+    return data.filter(item => item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1);
   },
 };

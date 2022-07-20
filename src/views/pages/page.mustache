@@ -14,6 +14,11 @@
         <div class="item--genre">Gênero: {{sex}}</div>
     </div>
     {{/list}}
-</div>    
+</div>
 
+{{^list}}
+<div class="container no-list">
+    <h2>Não há animais disponíveis nessas condições.<h2>
+</div>
+{{/list}}
 {{>partials/footer}}
